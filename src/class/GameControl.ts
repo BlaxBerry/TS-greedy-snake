@@ -9,6 +9,8 @@ export default class GameControl {
     ScoreBar: ScoreBar;
     // default snake go down
     direction: string = 's';
+    // gameover
+    isOver: boolean = false;
 
     constructor() {
         this.snake = new Snake();
@@ -62,12 +64,41 @@ export default class GameControl {
                 break;
         };
 
-        // change snake's position
-        this.snake.x = x;
-        this.snake.y = y;
+        //
+        try {
+            // change snake's position
+            this.snake.x = x;
+            this.snake.y = y;
+        } catch (err) {
+            alert(err.message);
+            this.isOver = true;
+        }
+
+
+        // check snake eat food or not
+        this.checkEat(x, y)
+
 
         // 
-        setTimeout(this.move.bind(this), 500 - (this.ScoreBar.level - 1) * 100)
+        if (!this.isOver) {
+            setTimeout(this.move.bind(this), 500 - (this.ScoreBar.level - 1) * 100)
+        }
+    }
+
+    // check snake eat food or not
+    checkEat(x: number, y: number) {
+        if (x === this.food.x && y === this.food.y) {
+            console.log('ate');
+            // 1. change food postion
+            this.food.change();
+            // 2. add score
+            this.ScoreBar.addScore()
+            // 3. add snake body
+            this.snake.addBody()
+
+
+        }
+
     }
 }
 

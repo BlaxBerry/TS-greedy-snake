@@ -7,7 +7,7 @@ export default class ScoreBar {
     maxLevel: number;
     upScore: number;
 
-    constructor(maxLevel: number = 10, upScore: number = 10) {
+    constructor(maxLevel: number = 10, upScore: number = 3) {
         this.scoreElement = document.getElementById('score')!;
         this.levelElement = document.getElementById('level')!;
         this.maxLevel = maxLevel;
