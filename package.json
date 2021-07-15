@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/BlaxBerry/TS-snake/issues"
   },
-  "homepage": "https://github.com/BlaxBerry/TS-snake#readme",
+  "homepage": "https://github.com/BlaxBerry/TS-snake/",
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^6.0.0",
