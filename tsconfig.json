@@ -1,0 +1,10 @@
+{
+    "include": ["./src/**/*"],
+    "compilerOptions": {
+        "module": "es6",
+        "target": "es6",
+        "sourceMap": false,
+        "noEmitOnError": true,
+        "strict": true
+    },
+}
