@@ -1,5 +1,5 @@
 // snake class
-class Snake {
+export default class Snake {
     snake: HTMLElement;
     head: HTMLElement;
     bodys: HTMLCollection;

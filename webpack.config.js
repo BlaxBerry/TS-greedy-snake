@@ -9,7 +9,7 @@ module.exports = {
     entry: "./src/index.ts",
 
     output: {
-        path: path.join(__dirname, 'doc'),
+        path: path.join(__dirname, 'docs'),
         filename: "bundle.js"
     },
 
