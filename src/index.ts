@@ -10,12 +10,12 @@ import ScoreBar from './class/Bar'
 
 
 // test code
-const food = new Food()
-setInterval(()=>{
-food.change()
-},500)
+// const food = new Food()
+// setInterval(()=>{
+// food.change()
+// },500)
 
-const bar = new ScoreBar()
-setInterval(() => {
-    bar.addScore()
-}, 500)
+// const bar = new ScoreBar()
+// setInterval(() => {
+//     bar.addScore()
+// }, 500)
